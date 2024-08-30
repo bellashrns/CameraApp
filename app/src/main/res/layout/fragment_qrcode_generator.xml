@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_24"
+    tools:context=".ui.pages.qrcode.QRCodeGeneratorFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_qrcode_generator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_text"
+            android:inputType="text"
+            android:autofillHints="name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_qrcode_generator"
+        android:layout_width="@dimen/dimen_200"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:text="@string/generate_qr_code"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/til_qrcode_generator"/>
+
+    <ImageView
+        android:id="@+id/iv_qrcode_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_qrcode_generator"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:contentDescription="@string/qrcode" />
+
+</RelativeLayout>

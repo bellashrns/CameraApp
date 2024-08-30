@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pages.camera.CameraActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/view_finder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="scan.json"
+        app:lottie_speed="1" />
+
+    <Button
+        android:id="@+id/btn_image_capture"
+        android:layout_width="@dimen/dimen_110"
+        android:layout_height="@dimen/dimen_110"
+        android:layout_marginBottom="@dimen/dimen_50"
+        android:text="@string/take_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_image_gallery"
+        android:layout_width="@dimen/dimen_110"
+        android:layout_height="@dimen/dimen_110"
+        android:layout_marginBottom="@dimen/dimen_50"
+        android:contentDescription="@string/image_result"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_image_capture" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
